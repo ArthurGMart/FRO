@@ -1,0 +1,82 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+nav {
+  background-color: #2A2C36;
+  color: #ddd;
+}
+.toggle-Menu{
+background: #1a0f26;
+cursor: pointer;
+padding: 1em;
+display: block;
+text-align: right;
+}
+#toggleMenu {
+  display: none;
+}
+#toggleMenu:checked ~ ul {
+  display: block;
+}
+#toggleMenu:checked ~ .toggle-Menu .fa-times{
+display: block;
+}
+#toggleMenu:checked ~ .toggle-Menu .fa-bars{
+display: none;
+}
+/* het menu verbergen als ook .verberg-menu*/
+nav>ul, .fa-times {
+  display: none;
+}
+
+nav ul {
+list-style-type: none;
+padding: 0;
+margin: 0;
+}
+nav a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 1em;
+}
+
+nav a:hover {
+  color: #e7f26d;
+  background: #1a0f26;
+}
+
+.bezit-submenu ul {
+  padding-left: .5em;
+  border-left: 5px double #ddd;
+}
+.bezit-submenu > a {
+  display: grid;
+  grid-template-columns: 1fr auto;
+}
+.bezit-submenu > a::after {
+  font-family: "Font Awesome\ 5 Free";
+  font-weight: 900;
+  content: "\f0d7";
+}
+.bezit-submenu:hover > a::after {
+  content: "\f150";
+}
+
+main {
+  padding: 1em;
+}
+main img {
+  max-width: 100%;
+}
+footer {
+  padding: 1em;
+  background: #1a0f26;
+  color: #ddd;
+  display: grid;
+  grid-template-rows: 1fr auto;
+}
